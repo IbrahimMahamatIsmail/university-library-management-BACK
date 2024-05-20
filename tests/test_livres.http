@@ -1,0 +1,33 @@
+### Afficher un livre en fonction de son ISBN
+GET http://localhost:4000/livres/
+
+### Créer un livre
+POST http://localhost:4000/livres
+Content-Type: application/json
+
+{
+    "ISBN": "978-2222222221",
+    "Titre": "Test de création",
+    "Auteur": "Test",
+    "Editeur": "Testing",
+    "AnneePublication": 2025,
+    "Categorie": "Programmationooo",
+    "NombreCopies": 4
+}
+
+### Modifier un livre
+PATCH http://localhost:4000/livres/978-2222222221
+Content-Type: application/json
+
+{
+    "ISBN": "978-7777777707",
+    "Titre": "Derniere_modif_possible",
+    "Auteur": "ibrahim_to_finish",
+    "Editeur": "dernier_test_de_modif",
+    "AnneePublication": 2012,
+    "Categorie": "Programmation2_dernier",
+    "NombreCopies": 513
+}
+
+### Supprimer un livre
+DELETE http://localhost:4000/livres/978-0131103627

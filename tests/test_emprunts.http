@@ -1,0 +1,31 @@
+### Info sur tous les emprunt
+GET http://localhost:4000/emprunts
+
+### Info sur un emprunt en fonction de son ID
+GET http://localhost:4000/emprunts/6
+
+### Créer un emprunt
+POST http://localhost:4000/emprunts
+Content-Type: application/json
+
+{
+  "IDEmprunt":"1",
+  "ISBN": "978-0000000000",
+  "IDUtilisateur": "2",
+  "DateEmprunt": "2021-01-01",
+  "DateRetourPrevue": "2021-01-15"
+}
+
+### Update un emprunt
+PATCH http://localhost:4000/emprunts/3
+Content-Type: application/json
+
+{
+  "ISBN": "978-3-16-148410-0",
+  "IDUtilisateur": "2",
+  "DateEmprunt": "2021-01-02",
+  "DateRetourPrevue": "2021-01-16"
+}
+
+### Supprimer un emprunt
+DELETE http://localhost:4000/emprunts/5

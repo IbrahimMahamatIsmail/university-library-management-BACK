@@ -1,0 +1,33 @@
+### Afficher tous les utilisateurs : 
+GET http://localhost:4000/users
+
+### Afficher un utilisateur :
+GET http://localhost:4000/users/3
+
+### Creer un utilisateur :
+POST http://localhost:4000/users
+Content-Type: application/json
+
+{
+    "IDUtilisateur": "1",
+    "Nom": "moi2",
+    "Prenom": "es3",
+    "Email": "doe2222@mail.com",
+    "TypeUtilisateur": "Professeur",
+    "DateInscription": "2024-01-01"
+}
+
+### Modifier un utilisateur :
+PATCH http://localhost:4000/users/2
+Content-Type: application/json
+
+{
+    "Nom": "Nom_updated",
+    "Prenom": "Prenom_update",
+    "Email": "mail@update.com",
+    "TypeUtilisateur": "Etudiant",
+    "DateInscription": "2021-01-01"
+}
+
+### Supprimer un utilisateur :
+DELETE http://localhost:4000/users/1

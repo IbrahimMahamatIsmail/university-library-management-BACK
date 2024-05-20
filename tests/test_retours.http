@@ -1,0 +1,26 @@
+### Afficher tous les retours
+GET http://localhost:4000/retours
+
+### Afficher un retour en fonction de son id
+GET http://localhost:4000/retours/9
+
+### Créer un retour
+POST http://localhost:4000/retours
+Content-Type: application/json
+
+{
+    "IDEmprunt": 6,
+    "DateRetourEffective": "2021-01-15"
+}
+
+### Modifier un retour
+PATCH http://localhost:4000/retours/9
+Content-Type: application/json
+
+{
+    "IDEmprunt": 6,
+    "DateRetourEffective": "2024-03-25"
+}
+
+### Supprimer un retour
+DELETE http://localhost:4000/retours/9
